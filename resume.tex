@@ -1,0 +1,187 @@
+%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% If using xelatex or lualatex:
+\setmainfont{Roboto Slab}
+\setsansfont{Lato}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+\name{Daniel Rush}
+\tagline{Senior Firmware Engineer}
+%% You can add multiple photos on the left or right
+\photoR{2.8cm}{headshot}
+%\photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+\personalinfo{%
+  \email{rush.daniel95@gmail.com}
+  \location{San Francisco, California}
+  \linkedin{daniel-rush95}
+  \github{theDrsh}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\cvsection{Experience}
+
+\cvevent{Senior Software/Firmware Engineer}{Carbon, Inc.}{June 2017 - Ongoing}{Redwood City, California}
+\begin{itemize}
+\item Built a motor controller from the ground up to communicate and integrate into the stack of the 3D printing system.
+\item Played an integral role in building and maintaining the firmware and low level software of the core platform.
+\end{itemize}
+
+\divider
+
+\cvevent{Associate Fimware Engineer}{California Mechatronics Center}{November 2017 - May 2017}{Chico, California}
+\begin{itemize}
+\item Developed firmware for an earthquake sensing system using MQTT and USB storage for data transmission and redundancy.
+\item Worked on verilog HDL for FPGA based sensor system
+\end{itemize}
+
+\cvsection{Projects}
+
+\cvevent{Motor Controller}{Carbon}{}{}
+\begin{itemize}
+\item FOC Motor controller
+\item Absolute or Relative encoder control
+\item USB Logging
+\item UART interface
+\item SPI controlled FET-Driver chip
+\item Safety Fault behaviors and detection
+\item Custom nested control algorithm
+\item High-Speed control
+\end{itemize}
+
+\divider
+\medskip
+
+\cvevent{Oxygen Subsystem}{Carbon}{}{}
+\begin{itemize}
+\item Oxygen concentration and distribution system
+\item I2C based
+\item Heart of printing process
+\end{itemize}
+
+\divider
+\medskip
+
+\cvevent{Open Source Firmware communications}{\href{https://github.com/theDrsh/uComs}{uComs}}{}{}
+\begin{itemize}
+\item Ongoing project to make starting an embedded project's communication protocol easy and generated
+\end{itemize}
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{My Life Philosophy}
+
+\begin{quote}
+"Break things, fix things, build things"
+\end{quote}
+
+\cvsection{Strengths}
+
+\cvtag{Hard-working}
+\cvtag{Detail Orientedl}
+\cvtag{Self-Starter}
+\cvtag{Dedicated Teammate}
+
+\divider\smallskip
+
+\cvtag{C++}
+\cvtag{Embedded Systems}\\
+\cvtag{Python}
+\cvtag{Linux}
+
+\divider\smallskip
+
+\cvtag{I2C}
+\cvtag{SPI}
+\cvtag{UART}
+\cvtag{USB}
+
+
+\cvsection{Languages}
+
+\cvskill{English}{5}
+\divider
+
+\cvskill{Spanish}{2}
+\divider
+
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vpsace etc to make ajustments.
+\medskip
+
+\cvsection{Education}
+
+\cvevent{B.Sc.\ Mechatronics Engineering}{CSU Chico}{Aug 2013 - May 2018}{}
+
+\divider
+
+\cvevent{B.Sc.\ Computer Engineering}{CSU Chico}{Aug 2013 - May 2018}{}
+
+\divider
+
+\cvsection{My Ideal Role}
+
+\wheelchart{1.5cm}{0.25cm}{%
+  5/5em/accent!30/Firmware Work,
+  2/7em/accent/Collaboration,
+  3/5em/accent!20/Working on tools,
+  3/10em/accent!40/{Integration\\and Testing}
+}
+
+
+\end{paracol}
+
+
+\end{document}
