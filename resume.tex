@@ -9,7 +9,9 @@
 
 % The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
-
+\usepackage{fontspec}
+\usepackage{roboto}
+\usepackage{lato}
 % If using xelatex or lualatex:
 \setmainfont{Roboto Slab}
 \setsansfont{Lato}
@@ -46,9 +48,7 @@
 \begin{document}
 \name{Daniel Rush}
 \tagline{Senior Firmware Engineer}
-%% You can add multiple photos on the left or right
-\photoR{2.8cm}{headshot}
-%\photoL{2.5cm}{Yacht_High,Suitcase_High}
+\photoL{2.5cm}{Yacht_High,Suitcase_High}
 
 \personalinfo{%
   \email{rush.daniel95@gmail.com}
