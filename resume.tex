@@ -47,8 +47,8 @@
 
 \begin{document}
 \name{Daniel Rush}
-\tagline{Senior Firmware Engineer}
-\photoL{2.5cm}{Yacht_High,Suitcase_High}
+\tagline{Senior Software Engineer}
+%% \photoL{2.5cm}{Yacht_High,Suitcase_High}
 
 \personalinfo{%
   \email{rush.daniel95@gmail.com}
@@ -69,50 +69,45 @@
 \begin{paracol}{2}
 \cvsection{Experience}
 
-\cvevent{Senior Software/Firmware Engineer}{Carbon, Inc.}{June 2017 - Ongoing}{Redwood City, California}
+\cvevent{Senior Software/Firmware Engineer}{\href{https://carbon3d.com}{Carbon, Inc.}}{June 2017 - Ongoing}{Redwood City, California}
 \begin{itemize}
-\item Built a motor controller from the ground up to communicate and integrate into the stack of the 3D printing system.
-\item Played an integral role in building and maintaining the firmware and low level software of the core platform.
+\item Built a motor controller from the ground up. Communicates and integrates with all of Carbon's 3D printers and other systems.
+\item Played an integral role as in building and maintaining the firmware and low level software of the core platform.
+\item Developed automation, code generation, hardware-in-the-loop tests, and tools for building and testing firmware and hardware.
 \end{itemize}
 
 \divider
 
-\cvevent{Associate Fimware Engineer}{California Mechatronics Center}{November 2017 - May 2017}{Chico, California}
+\cvevent{Associate Fimware Engineer}{\href{https://www.mechatronicscenter.com/}{California Mechatronics Center}}{November 2017 - May 2017}{Chico, California}
 \begin{itemize}
 \item Developed firmware for an earthquake sensing system using MQTT and USB storage for data transmission and redundancy.
-\item Worked on verilog HDL for FPGA based sensor system
+\item Worked on Verilog HDL for FPGA based sensor system with mass parallel sampling and data transfer.
+\item Rewrote library for data serialization optimizing for speed to keep up with parallel sampling rate.
 \end{itemize}
 
 \cvsection{Projects}
 
-\cvevent{Motor Controller}{Carbon}{}{}
+\cvevent{Motor Controller}{\href{https://carbon3d.com}{Carbon}}{}{}
 \begin{itemize}
-\item FOC Motor controller
-\item Absolute or Relative encoder control
-\item USB Logging
-\item UART interface
-\item SPI controlled FET-Driver chip
-\item Safety Fault behaviors and detection
-\item Custom nested control algorithm
-\item High-Speed control
+\item FOC Motor controller, cascaded control loop allows for torque, velocity, relative position, or absolute position control.
+\item USB Logging, UART API interface, SPI Controlled FET-Driver chip, I2C EEPROM hardware version control
+\item Hardware fault detection and safety states to prevent damage to mechanics and electronics.
 \end{itemize}
 
 \divider
-\medskip
 
-\cvevent{Oxygen Subsystem}{Carbon}{}{}
+\cvevent{Oxygen Subsystem}{\href{https://carbon3d.com}{Carbon}}{}{}
 \begin{itemize}
-\item Oxygen concentration and distribution system
-\item I2C based
-\item Heart of printing process
+\item Oxygen concentration and distribution system. Heart of CLIP printing process.
+\item I2C based system of solenoids and regulators.
+\item Developed abstraction layers to service multiple versions of hardwaer
 \end{itemize}
-
 \divider
-\medskip
 
 \cvevent{Open Source Firmware communications}{\href{https://github.com/theDrsh/uComs}{uComs}}{}{}
 \begin{itemize}
 \item Ongoing project to make starting an embedded project's communication protocol easy and generated
+\item Integrates all the nitty gritty of communicating between a host and a device, providing a boilerplate for communications
 \end{itemize}
 
 %% Switch to the right column. This will now automatically move to the second
@@ -122,39 +117,44 @@
 \cvsection{My Life Philosophy}
 
 \begin{quote}
-"Break things, fix things, build things"
+"Build things, break things, fix things"
 \end{quote}
 
 \cvsection{Strengths}
 
-\cvtag{Hard-working}
-\cvtag{Detail Orientedl}
+\cvtag{Hard-worker}
+\cvtag{Detail Oriented}
 \cvtag{Self-Starter}
 \cvtag{Dedicated Teammate}
+\cvtag{Communicator}
 
-\divider\smallskip
-
-\cvtag{C++}
-\cvtag{Embedded Systems}\\
-\cvtag{Python}
-\cvtag{Linux}
-
-\divider\smallskip
+\cvsection{Proficiencies}
 
 \cvtag{I2C}
 \cvtag{SPI}
 \cvtag{UART}
 \cvtag{USB}
-
+\cvtag{System Debugging}
+\cvtag{System Integration}
+\cvtag{Board Bring-up}
+\cvtag{Embedded Systems}
+\cvtag{Linux}
+\cvtag{Bazel}
+\cvtag{Cmake}
+\cvtag{Jenkins}
+\cvtag{PyQT}
+\cvtag{TKinter}
+\cvtag{Saleae Logic analyzer}
 
 \cvsection{Languages}
 
-\cvskill{English}{5}
-\divider
-
-\cvskill{Spanish}{2}
-\divider
-
+\cvskill{C++}{5}
+\cvskill{Python}{4}
+\cvskill{Mako}{4}
+\cvskill{YAML}{4}
+\cvskill{Verilog}{2}
+\cvskill{Lua}{2}
+\cvskill{Bash}{1}
 
 %% Yeah I didn't spend too much time making all the
 %% spacing consistent... sorry. Use \smallskip, \medskip,
