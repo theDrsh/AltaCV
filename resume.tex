@@ -62,71 +62,39 @@
 % \AtBeginEnvironment{itemize}{\small}
 
 %% Set the left/right column width ratio to 6:4.
-\columnratio{0.6}
+\columnratio{0.55}
 
 % Start a 2-column paracol. Both the left and right columns will automatically
 % break across pages if things get too long.
 \begin{paracol}{2}
 \cvsection{Experience}
 
-\cvevent{Senior Software/Firmware Engineer}{\href{https://carbon3d.com}{Carbon, Inc.}}{June 2017 - Ongoing}{Redwood City, California}
+\cvevent{Senior Software/Firmware Engineer}{\href{https://carbon3d.com}{Carbon, Inc.}}{June 2017 - Current}{Redwood City, California}
 \begin{itemize}
-\item Built a motor controller from the ground up. Communicates and integrates with all of Carbon's 3D printers and other systems.
-\item Played an integral role as in building and maintaining the firmware and low level software of the core platform.
-\item Developed automation, code generation, hardware-in-the-loop tests, and tools for building and testing firmware and hardware.
+\item Main firmware engineer on the \underline{\textbf{\href{https://www.carbon3d.com/products/m3-3d-printer/}{M3 and M3 Max}}} project. Developed project from conception through engineering build, alpha, beta, and production
+\item Maintained firmware for all Carbon products and subsystems
+\item Developed automation, code generation, hardware-in-the-loop tests, and tools for building and testing firmware and hardware
+\item Main Owner of core subsystems that enable printing, including the Oxygen control, and motion control subsystems
 \end{itemize}
 
 \divider
 
-\cvevent{Associate Fimware Engineer}{\href{https://www.mechatronicscenter.com/}{California Mechatronics Center}}{November 2017 - May 2017}{Chico, California}
+\cvevent{Associate Firmware Engineer}{\href{https://www.mechatronicscenter.com/}{California Mechatronics Center}}{November 2016 - May 2017 }{Chico, California}
 \begin{itemize}
-\item Developed firmware for an earthquake sensing system using MQTT and USB storage for data transmission and redundancy.
-\item Worked on Verilog HDL for FPGA based sensor system with mass parallel sampling and data transfer.
-\item Rewrote library for data serialization optimizing for speed to keep up with parallel sampling rate.
+\item Developed firmware for an earthquake sensing system using MQTT and USB device for data transmission and redundant storage in case of blackout or loss of internet
+\item Worked on Verilog HDL for FPGA based sensor system with mass parallel sampling and data transfer
+\item Developed encoding and decoding of data from FPGA to microcontroller
+\item Overcame hardware constraints with custom serialization library for data transmission with limited RAM
 \end{itemize}
 
-\cvsection{Projects}
-
-\cvevent{Motor Controller}{\href{https://carbon3d.com}{Carbon}}{}{}
-\begin{itemize}
-\item FOC Motor controller, cascaded control loop allows for torque, velocity, relative position, or absolute position control.
-\item USB Logging, UART API interface, SPI Controlled FET-Driver chip, I2C EEPROM hardware version control
-\item Hardware fault detection and safety states to prevent damage to mechanics and electronics.
-\end{itemize}
+\cvsection{Languages}
+\cvskill{C++}{5}
+\cvskill{C}{5}
+\cvskill{Python}{4}
+\cvskill{Verilog}{2}
+\cvskill{Bash}{1}
 
 \divider
-
-\cvevent{Oxygen Subsystem}{\href{https://carbon3d.com}{Carbon}}{}{}
-\begin{itemize}
-\item Oxygen concentration and distribution system. Heart of CLIP printing process.
-\item I2C based system of solenoids and regulators.
-\item Developed abstraction layers to service multiple versions of hardwaer
-\end{itemize}
-\divider
-
-\cvevent{Open Source Firmware communications}{\href{https://github.com/theDrsh/uComs}{uComs}}{}{}
-\begin{itemize}
-\item Ongoing project to make starting an embedded project's communication protocol easy and generated
-\item Integrates all the nitty gritty of communicating between a host and a device, providing a boilerplate for communications
-\end{itemize}
-
-%% Switch to the right column. This will now automatically move to the second
-%% page if the content is too long.
-\switchcolumn
-
-\cvsection{My Life Philosophy}
-
-\begin{quote}
-"Build things, break things, fix things"
-\end{quote}
-
-\cvsection{Strengths}
-
-\cvtag{Hard-worker}
-\cvtag{Detail Oriented}
-\cvtag{Self-Starter}
-\cvtag{Dedicated Teammate}
-\cvtag{Communicator}
 
 \cvsection{Proficiencies}
 
@@ -134,54 +102,107 @@
 \cvtag{SPI}
 \cvtag{UART}
 \cvtag{USB}
-\cvtag{System Debugging}
+\cvtag{MQTT}
+\cvtag{Protobuf}
+\cvtag{Docker}
 \cvtag{System Integration}
 \cvtag{Board Bring-up}
-\cvtag{Embedded Systems}
 \cvtag{Linux}
 \cvtag{Bazel}
 \cvtag{Cmake}
 \cvtag{Jenkins}
-\cvtag{PyQT}
-\cvtag{TKinter}
-\cvtag{Saleae Logic analyzer}
+\cvtag{HIL Testing}
+\cvtag{RTOS}
+\cvtag{YAML}
+\cvtag{Mako}
 
-\cvsection{Languages}
 
-\cvskill{C++}{5}
-\cvskill{Python}{4}
-\cvskill{Mako}{4}
-\cvskill{YAML}{4}
-\cvskill{Verilog}{2}
-\cvskill{Lua}{2}
-\cvskill{Bash}{1}
+\cvsection{Strengths}
 
-%% Yeah I didn't spend too much time making all the
-%% spacing consistent... sorry. Use \smallskip, \medskip,
-%% \bigskip, \vpsace etc to make ajustments.
-\medskip
+\cvtag{Detail Oriented}
+\cvtag{Self-Starter}
+\cvtag{Dedicated Teammate}
+\cvtag{Communicator}
+\cvtag{Persistent Problem-Solver}
+
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
 
 \cvsection{Education}
 
-\cvevent{B.Sc.\ Mechatronics Engineering}{CSU Chico}{Aug 2013 - May 2018}{}
+\cvevent{B.Sc.\ Mechatronics Engineering}{California State University, Chico}{Aug 2013 - May 2018}{}
 
 \divider
 
-\cvevent{B.Sc.\ Computer Engineering}{CSU Chico}{Aug 2013 - May 2018}{}
+\cvevent{B.Sc.\ Computer Engineering}{California State University, Chico}{Aug 2013 - May 2018}{}
 
 \divider
 
-\cvsection{My Ideal Role}
+\cvsection{Projects}
 
-\wheelchart{1.5cm}{0.25cm}{%
-  5/5em/accent!30/Firmware Work,
-  2/7em/accent/Collaboration,
-  3/5em/accent!20/Working on tools,
-  3/10em/accent!40/{Integration\\and Testing}
-}
+\cvevent{M3 And M3 Max}{\href{https://carbon3d.com}{Carbon}}{}{}
+\begin{itemize}
+\item Worked with hardware engineers, product managers, and print development engineers to create firmware requirements.
+\item Built all new subsystems in house to create Carbon's "smartest" printer
+\item Wrote firmware with extensibilty, ease of debug, and robustness in mind to create a lasting product.
+\item Brought up and integrated 3 systems, from the first engineering build to the first production unit.
+\item Dealt with many challenges including supply chain shortages which necessitated new drivers from scratch on a short timeline.
+\end{itemize}
 
+\divider
+
+\cvevent{Motor Controller}{\href{https://carbon3d.com}{Carbon}}{}{}
+\begin{itemize}
+\item Developed from conception a FOC Motor controller, with cascaded control loop allows for torque, velocity, relative position, or absolute position control.
+\item Created drivers for USB Logging, UART API interface, SPI Controlled FET-Driver chip, I2C EEPROM hardware version control.
+\item Designed and implemented hardware fault detection and safety states to prevent damage to mechanics and electronics.
+\item Architected HIL(Hardware-In-the-Loop) tester using dynamometer for system and firmware validation.
+\end{itemize}
 
 \end{paracol}
+\newpage
 
+\cvsection{Other Projects}
+
+\cvevent{Open Source Firmware communications}{\href{https://github.com/theDrsh/uComs}{uComs}}{}{}
+\begin{itemize}
+\item Ongoing project to make starting an embedded project's communication protocol easy and generated
+\item Integrates all the low-level intricacies of communicating between a host and a device, providing a boilerplate for communications
+\end{itemize}
+
+\divider
+
+\cvevent{Microtest}{\href{https://carbon3d.com}{Carbon}}{}{}
+\begin{itemize}
+\item Developed a firmware image which was able to test core interfaces of the microcontroller
+item Server-side application to interface the microcontroller with gtest on Linux, using  \underline{\textbf{\href{https://github.com/nanopb/nanopb}{Nanopb}}}
+\item Developed Jenkins-based job to automatically run tests upon pull request.
+\item Created ability write firmware that could be automatically called and tested via Jenkins.
+\item Recorded statistics like execution time and logs on target processor.
+\end{itemize}
+
+\divider
+
+\cvevent{Code Generation Projects}{\href{https://carbon3d.com}{Carbon}}{}{}
+\begin{itemize}
+\item Worked to develop python-generated firmware to automate different parts of the firmware stack:
+	\begin{itemize}
+	\item Server <-> embedded system communication.
+	\item microcontroller <-> microcontroller communication and commands.
+	\item Hardware faults and alerts generated through entire software stack micro -> server -> cloud.
+	\end{itemize}
+\end{itemize}
+
+\divider
+
+\cvevent{Board Bootloader and Over-The-Air(OTA) Update Software}{\href{https://carbon3d.com}{Carbon}}{}{}
+\begin{itemize}
+\item Helped build the bootloaders for smart subsystems of printer
+\item Extended OTA updates to incorporate updating all smart subsystems.
+\end{itemize}
+
+\divider
 
 \end{document}
