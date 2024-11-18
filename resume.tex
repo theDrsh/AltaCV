@@ -69,22 +69,15 @@
 \begin{paracol}{2}
 \cvsection{Experience}
 
-\cvevent{Senior Software/Firmware Engineer}{\href{https://carbon3d.com}{Carbon, Inc.}}{June 2017 - Current}{Redwood City, California}
+\cvevent{Lead Senior Firmware Engineer}{\href{https://carbon3d.com}{Carbon, Inc.}}{June 2017 - Current}{Redwood City, California}
 \begin{itemize}
-\item Main firmware engineer on the \underline{\textbf{\href{https://www.carbon3d.com/products/m3-3d-printer/}{M3 and M3 Max}}} project. Developed project from conception through engineering build, alpha, beta, and production
-\item Maintained firmware for all Carbon products and subsystems
-\item Developed automation, code generation, hardware-in-the-loop tests, and tools for building and testing firmware and hardware
-\item Main Owner of core subsystems that enable printing, including the Oxygen control, and motion control subsystems
-\end{itemize}
-
-\divider
-
-\cvevent{Associate Firmware Engineer}{\href{https://www.mechatronicscenter.com/}{California Mechatronics Center}}{November 2016 - May 2017 }{Chico, California}
-\begin{itemize}
-\item Developed firmware for an earthquake sensing system using MQTT and USB device for data transmission and redundant storage in case of blackout or loss of internet
-\item Worked on Verilog HDL for FPGA based sensor system with mass parallel sampling and data transfer
-\item Developed encoding and decoding of data from FPGA to microcontroller
-\item Overcame hardware constraints with custom serialization library for data transmission with limited RAM
+\item Led the firmware engineering team at Carbon.
+\item Delivered the Automatic Operation (AO) Backpack as a solo firmware engineer.
+\item Served as the main firmware engineer on the M3 and M3 Max project—Carbon’s smartest, fastest, and most cost-effective printer to date.
+\item Built a Brushless DC Motor Controller, critical to all Carbon products, from the ground up.
+\item Developed Hardware-in-the-loop (HIL) testing to identify and fix bugs before shipping.
+\item Brought up many new circuit boards and developed an automated HIL system for board bring-up.
+\item Established Over-The-Air (OTA) updates for motors and other subsystems in the printer.
 \end{itemize}
 
 \cvsection{Languages}
@@ -116,20 +109,6 @@
 \cvtag{YAML}
 \cvtag{Mako}
 
-
-\cvsection{Strengths}
-
-\cvtag{Detail Oriented}
-\cvtag{Self-Starter}
-\cvtag{Dedicated Teammate}
-\cvtag{Communicator}
-\cvtag{Persistent Problem-Solver}
-
-
-%% Switch to the right column. This will now automatically move to the second
-%% page if the content is too long.
-\switchcolumn
-
 \cvsection{Education}
 
 \cvevent{B.Sc.\ Mechatronics Engineering}{California State University, Chico}{Aug 2013 - May 2018}{}
@@ -138,27 +117,42 @@
 
 \cvevent{B.Sc.\ Computer Engineering}{California State University, Chico}{Aug 2013 - May 2018}{}
 
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+
 \divider
 
 \cvsection{Projects}
 
-\cvevent{M3 And M3 Max}{\href{https://carbon3d.com}{Carbon}}{}{}
+\cvevent{ \underline{\textbf{\href{https://www.carbon3d.com/products/ao-suite-hardware}{Automation Operation(AO) Backpack}}}}{\href{https://carbon3d.com}{Carbon}}{}{}
 \begin{itemize}
-\item Worked with hardware engineers, product managers, and print development engineers to create firmware requirements.
-\item Built all new subsystems in house to create Carbon's "smartest" printer
-\item Wrote firmware with extensibilty, ease of debug, and robustness in mind to create a lasting product.
-\item Brought up and integrated 3 systems, from the first engineering build to the first production unit.
-\item Dealt with many challenges including supply chain shortages which necessitated new drivers from scratch on a short timeline.
+\item Worked with Mechanical and Electrical engineers to design behaviors and operate hardware to make printers fully autonomous.
+\item Led the effort to move from multiple motor vendors to utilizing a single motor controller (also a project of mine) to reduce costs and increase our ownership of code, as well as enable OTA updateability and logging.
+\item Delivered the product in the shortest timeline ever seen at Carbon—on time and under budget as a team of one.
+\item Drove firmware development using customer feedback in the cycle and continued to release updates based on that feedback, improving the product over time.
 \end{itemize}
 
 \divider
 
-\cvevent{Motor Controller}{\href{https://carbon3d.com}{Carbon}}{}{}
+\cvevent{\underline{\textbf{\href{https://www.carbon3d.com/products/m3-3d-printer/}{M3 and M3 Max}}}}{\href{https://carbon3d.com}{Carbon}}{}{}
 \begin{itemize}
-\item Developed from conception a FOC Motor controller, with cascaded control loop allows for torque, velocity, relative position, or absolute position control.
-\item Created drivers for USB Logging, UART API interface, SPI Controlled FET-Driver chip, I2C EEPROM hardware version control.
+\item Collaborated with hardware engineers, product managers, and print development engineers to create firmware requirements.
+\item Developed all new subsystems in-house to create Carbon’s “smartest” printer.
+\item Wrote firmware with extensibility, ease of debugging, and robustness in mind to create a lasting product.
+\item Addressed challenges, including supply chain shortages, which necessitated creating new drivers from scratch on a tight timeline.
+\end{itemize}
+
+\divider
+
+\cvevent{Brushless DC Motor Controller(BLDC)}{\href{https://carbon3d.com}{Carbon}}{}{}
+\begin{itemize}
+\item Developed a motor controller from concept to production, featuring cascaded control loops for torque, velocity, relative position, and absolute position control.
+\item Created drivers for USB logging, UART API interface, SPI-controlled FET-driver chip, and I2C EEPROM for hardware version control.
 \item Designed and implemented hardware fault detection and safety states to prevent damage to mechanics and electronics.
-\item Architected HIL(Hardware-In-the-Loop) tester using dynamometer for system and firmware validation.
+\item Architected Hardware-in-the-loop(HIL) testing using a dynamometer for system and firmware validation.
 \end{itemize}
 
 \end{paracol}
@@ -166,12 +160,12 @@
 
 \cvsection{Other Projects}
 
-\cvevent{Open Source Firmware communications}{\href{https://github.com/theDrsh/uComs}{uComs}}{}{}
+\cvevent{Board Testing Rig}{\href{https://carbon3d.com}{Carbon}}{}{}
 \begin{itemize}
-\item Ongoing project to make starting an embedded project's communication protocol easy and generated
-\item Integrates all the low-level intricacies of communicating between a host and a device, providing a boilerplate for communications
+\item Implemented a method for electrical engineers to hand off new circuit board designs by allowing them to describe hardware changes using YAML
+\item YAML files from Electrical Engineers were able to be used to test any new circuit board at a low-level to test for manufacturing correctness
+\item Created a bridge so that firmware team could take new YAML file and use it to make changes to code and then test the new code against the file so that there was a single source of truth for the electrical hardware/firmware testing and development.
 \end{itemize}
-
 \divider
 
 \cvevent{Microtest}{\href{https://carbon3d.com}{Carbon}}{}{}
@@ -201,6 +195,7 @@ item Server-side application to interface the microcontroller with gtest on Linu
 \begin{itemize}
 \item Helped build the bootloaders for smart subsystems of printer
 \item Extended OTA updates to incorporate updating all smart subsystems.
+\item Helped with designs for updater that manages all the firmware versions across the printer/device to only update applicable subsystems.
 \end{itemize}
 
 \divider
